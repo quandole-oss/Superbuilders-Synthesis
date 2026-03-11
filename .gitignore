@@ -1,0 +1,9 @@
+node_modules/
+.env
+.DS_Store
+
+# Crawl output (generated) — track crawl-results.json as source of truth
+crawl-output/html/
+crawl-output/markdown/
+crawl-output/json/
+crawl-output/screenshots/

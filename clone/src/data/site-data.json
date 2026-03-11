@@ -1,0 +1,281 @@
+{
+  "brand": {
+    "name": "Synthesis Tutor",
+    "domain": "tutor.synthesis.com",
+    "marketingDomain": "www.synthesis.com/tutor",
+    "theme": "dark",
+    "fonts": {
+      "primary": "Work Sans",
+      "secondary": "Signika Negative"
+    },
+    "colors": {
+      "background": "slate-950",
+      "backgroundAlt": "black",
+      "primary": "#3b82f6",
+      "accent": "#8b5cf6",
+      "cyan": "#06b6d4",
+      "text": "#ffffff"
+    },
+    "backgroundImage": "starfield",
+    "logo": "Synthesis Tutor",
+    "contactEmail": "questions@synthesis.com"
+  },
+
+  "user": {
+    "email": "parent@example.com",
+    "accountStatus": "Trialing",
+    "plan": {
+      "name": "Monthly",
+      "type": "Family",
+      "nextBillingCycle": "2026-03-18",
+      "amountDue": 29,
+      "currency": "USD"
+    },
+    "paymentMethod": {
+      "type": "card",
+      "lastFour": "0105",
+      "expiration": "1/2030"
+    }
+  },
+
+  "students": [
+    {
+      "name": "Jaku",
+      "initial": "J",
+      "avatarType": "initial",
+      "activity": []
+    }
+  ],
+
+  "subjects": [
+    { "name": "Addition", "icon": "addition-icon" },
+    { "name": "Subtraction", "icon": "subtraction-icon" },
+    { "name": "Multiplication", "icon": "multiplication-icon" },
+    { "name": "Division", "icon": "division-icon" },
+    { "name": "Fractions", "icon": "fractions-icon" },
+    { "name": "Numbers and Place Value", "icon": "numbers-place-value-icon" },
+    { "name": "Bonus Lessons", "icon": "bonus-lessons-icon" }
+  ],
+
+  "marketing": {
+    "hero": {
+      "heading": "Your child's personal math tutor.",
+      "subtext": "Warm, patient, encouraging. The Tutor adapts to your child and meets them exactly where they are.",
+      "audience": "Join over 25,000 forward-thinking families. Designed for ages 5-11.",
+      "ctaText": "Start Free Trial",
+      "ctaUrl": "/signup"
+    },
+
+    "testimonials": [
+      { "child": "Bryce", "relation": "mom", "author": "Bryce's mom" },
+      { "child": "Wayne", "relation": "mom", "author": "Wayne's mom" },
+      { "child": "Ayden", "relation": "mom", "author": "Ayden's mom" },
+      { "child": "Claire", "relation": "mom", "author": "Claire's mom" },
+      { "child": "Noah", "relation": "mom", "author": "Noah's mom" },
+      { "child": "Anand", "relation": "dad", "author": "Anand's dad" },
+      { "child": "Jane", "relation": "mom", "author": "Jane's mom" }
+    ],
+
+    "features": [
+      { "title": "Adapts to ability", "description": "The Tutor meets your child exactly where they are and adjusts in real time." },
+      { "title": "Immediate evaluation", "description": "Instant feedback on every step so misconceptions are corrected right away." },
+      { "title": "Familiar environment", "description": "A comfortable, friendly interface that kids enjoy using." },
+      { "title": "Optimized for learning", "description": "Every interaction is designed to maximize understanding and retention." },
+      { "title": "Active engagement", "description": "Students actively work through problems rather than passively watching." },
+      { "title": "Fun and gamified", "description": "Game-like elements keep students motivated and coming back for more." },
+      { "title": "Progress reports", "description": "Parents get clear visibility into their child's growth and areas of focus." },
+      { "title": "Hands-off for parents", "description": "No prep, no teaching required. The Tutor handles everything." }
+    ],
+
+    "featureCards": [
+      { "title": "Deep Foundational Understanding", "description": "Builds real comprehension, not just memorization of procedures." },
+      { "title": "1-on-1 Attention", "description": "Every student gets personalized, patient guidance through each concept." },
+      { "title": "Surfaces Mistakes & Fills Gaps", "description": "Identifies misconceptions and fills knowledge gaps before they compound." },
+      { "title": "Immersive Engaging Fun", "description": "A captivating experience that makes math feel like play." },
+      { "title": "Math that Clicks", "description": "Students develop intuition so math concepts truly make sense." }
+    ],
+
+    "subjectsCovered": [
+      "Counting & Cardinality",
+      "Addition",
+      "Subtraction",
+      "Multiplication",
+      "Division",
+      "Fractions",
+      "Algebraic Thinking"
+    ],
+
+    "pricing": {
+      "family": {
+        "label": "Family",
+        "description": "Up to 7 students",
+        "plans": [
+          { "name": "Monthly", "price": 29, "period": "mo", "display": "$29/mo" },
+          { "name": "Annual", "price": 119, "period": "yr", "display": "$119/yr" }
+        ]
+      },
+      "individual": {
+        "label": "Individual",
+        "plans": [
+          { "name": "Monthly", "price": 35, "period": "mo", "display": "$35/mo" },
+          { "name": "Annual", "price": 25, "period": "mo", "display": "$25/mo" }
+        ]
+      },
+      "familyLarge": {
+        "label": "Family (Large)",
+        "plans": [
+          { "name": "Monthly", "price": 70, "period": "mo", "display": "$70/mo" },
+          { "name": "Annual", "pricePerMonth": 33.33, "period": "mo", "display": "$33.33/mo" },
+          { "name": "Lifetime", "price": 1499, "display": "$1,499" }
+        ]
+      },
+      "individualLarge": {
+        "label": "Individual (Large)",
+        "plans": [
+          { "name": "Monthly", "price": 45, "period": "mo", "display": "$45/mo" },
+          { "name": "Annual", "price": 29, "period": "mo", "display": "$29/mo" },
+          { "name": "Lifetime", "price": 999, "display": "$999" }
+        ]
+      }
+    },
+
+    "faq": [],
+
+    "origin": {
+      "author": "Josh Dahn",
+      "story": "SpaceX origin story"
+    }
+  },
+
+  "gift": {
+    "heading": "Gift Math Confidence That Lasts",
+    "fields": ["yourEmail", "recipientEmail"],
+    "tiers": [
+      { "name": "One Month", "price": 29, "display": "$29", "students": "Up to 7 students" },
+      { "name": "Three Months", "price": 87, "display": "$87", "students": "Up to 7 students" },
+      { "name": "One Year", "price": 119, "display": "$119", "students": "Up to 7 students" }
+    ],
+    "datePicker": {
+      "options": ["Today", "Set a Date"]
+    },
+    "message": {
+      "maxChars": 500,
+      "defaultLength": 230
+    },
+    "defaultTotal": 87,
+    "links": {
+      "terms": "/terms",
+      "privacy": "/privacy"
+    }
+  },
+
+  "referral": {
+    "heading": "Referral Program",
+    "description": "Introducing referral program with which you can get subscriptions for free.",
+    "steps": [
+      { "step": 1, "label": "Share link" },
+      { "step": 2, "label": "7-day trial" },
+      { "step": 3, "label": "Subscription begins" },
+      { "step": 4, "label": "$29 credit" }
+    ]
+  },
+
+  "pages": {
+    "students": {
+      "path": "/students",
+      "heading": "Who's Learning?",
+      "addStudentLink": "/students/signup",
+      "addStudentLabel": "Add a student"
+    },
+    "welcome": {
+      "path": "/",
+      "heading": "Welcome, {studentName}!",
+      "subtext": "Let's do a quick sound check.",
+      "ctaText": "Start",
+      "background": "starfield"
+    },
+    "activity": {
+      "path": "/activity",
+      "heading": "Activity Timeline",
+      "emptyState": "Student doesn't have any activity yet.",
+      "links": [
+        { "label": "Go Back", "action": "back" },
+        { "label": "Get Started", "action": "start" }
+      ]
+    },
+    "accountBilling": {
+      "path": "/account/billing",
+      "tabs": ["Progress", "Timeline"]
+    },
+    "accountSubscribe": {
+      "path": "/account/subscribe",
+      "heading": "My Account",
+      "sections": ["Billing", "Students", "Referral"],
+      "actions": ["Cancel Plan", "Change Plan"],
+      "invoicesTable": true,
+      "logoutButton": true
+    },
+    "signup": {
+      "path": "/signup",
+      "heading": "Add your child",
+      "fields": ["First name", "Last name", "Birthday Date"],
+      "ctaText": "Continue",
+      "note": "You can add more children later."
+    },
+    "login": {
+      "path": "/login",
+      "behavior": "Redirects to welcome screen when authenticated"
+    },
+    "forgotPassword": {
+      "path": "/forgot-password",
+      "heading": "Forgot Username or Password",
+      "fields": ["Username or Email"],
+      "ctaText": "Send Reset Link",
+      "backLink": {
+        "label": "Back to Login",
+        "url": "/login"
+      }
+    }
+  },
+
+  "navigation": {
+    "sidebar": {
+      "logo": "Synthesis Tutor",
+      "tabs": [
+        { "label": "My Students", "url": "/students" },
+        { "label": "My Account", "url": "/account/subscribe" }
+      ],
+      "contactUs": {
+        "label": "Contact Us",
+        "href": "mailto:questions@synthesis.com"
+      }
+    },
+    "footer": {
+      "sections": [
+        {
+          "heading": "Products",
+          "links": [
+            { "label": "Tutor", "url": "/tutor" },
+            { "label": "Teams", "url": "/teams" }
+          ]
+        },
+        {
+          "heading": "Company",
+          "links": [
+            { "label": "About", "url": "/about" },
+            { "label": "Blog", "url": "/blog" },
+            { "label": "Careers", "url": "/careers" }
+          ]
+        },
+        {
+          "heading": "Contact",
+          "links": [
+            { "label": "Support", "href": "mailto:questions@synthesis.com" },
+            { "label": "Privacy Policy", "url": "/privacy" },
+            { "label": "Terms of Service", "url": "/terms" }
+          ]
+        }
+      ]
+    }
+  }
+}

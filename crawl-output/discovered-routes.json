@@ -1,0 +1,62 @@
+{
+  "source": "Next.js _buildManifest.js",
+  "buildId": "t1mpwG2xtOq0B5Cl6UT8h",
+  "publicRoutes": [
+    "/",
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/reset-password",
+    "/trial",
+    "/demo",
+    "/gift",
+    "/gift/redeem",
+    "/gift/welcome",
+    "/gift/already-subscribed",
+    "/affiliate",
+    "/affiliate/rakuten",
+    "/referral",
+    "/flashcards",
+    "/arcade",
+    "/binary",
+    "/widgets",
+    "/ipad",
+    "/404",
+    "/500"
+  ],
+  "authenticatedRoutes": [
+    "/students",
+    "/activity",
+    "/account/billing",
+    "/account/subscribe",
+    "/account/cancel-trial",
+    "/account/scholarship-application",
+    "/organization/onboarding",
+    "/organization/signin"
+  ],
+  "dynamicRoutes": [
+    "/exploration/[explorationUrlName]",
+    "/discount/[discountCode]",
+    "/referral/[referralCode]",
+    "/unit/[lessonGroupSlug]",
+    "/m/[token]",
+    "/[org-slug]",
+    "/[org-slug]/classes/[classId]",
+    "/[org-slug]/classes/[classId]/lesson/[lessonId]",
+    "/[org-slug]/settings"
+  ],
+  "siteMetadata": {
+    "title": "Synthesis Tutor",
+    "description": "Your child's own superhuman math tutor. Available on iPad and desktop.",
+    "keywords": "synthesis, tutor, math, learning, education",
+    "themeColor": "#000000",
+    "ogImage": "https://resources.synthesis.com/images/marketing/synthesis-tutor-1.png",
+    "twitter": "@synthesischool",
+    "fonts": ["WorkSans", "Signika Negative"],
+    "framework": "Next.js",
+    "hosting": "Vercel",
+    "analytics": ["PostHog", "FullStory", "Vercel Analytics", "Axiom"],
+    "locales": ["en", "es", "pt-BR"],
+    "backgroundImage": "/_next/static/media/grid_stars_bg.c4b76309.webp"
+  }
+}

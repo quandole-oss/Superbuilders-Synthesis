@@ -1,0 +1,17 @@
+{
+  "name": "synthesis-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "crawl": "node scripts/crawl.js",
+    "crawl:json": "node scripts/crawl-with-json.js",
+    "screenshots": "node scripts/screenshots.js",
+    "process": "node scripts/process-crawl-output.js",
+    "dev": "cd clone && npm run dev",
+    "build": "cd clone && npm run build"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
