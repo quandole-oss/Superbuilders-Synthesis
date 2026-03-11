@@ -14,6 +14,8 @@ import FractionsUnit from "./pages/FractionsUnit";
 import FractionLesson from "./pages/FractionLesson";
 import BonusUnit from "./pages/BonusUnit";
 import FlashcardFrenzy from "./pages/FlashcardFrenzy";
+import UnitPage from "./components/UnitPage";
+import LessonShell from "./components/LessonShell";
 
 export default function App() {
   return (
@@ -34,6 +36,8 @@ export default function App() {
         <Route path="/exploration/fractions/:lessonId" element={<FractionLesson />} />
         <Route path="/exploration/bonus" element={<BonusUnit />} />
         <Route path="/exploration/flashcard_frenzy_multiply" element={<FlashcardFrenzy />} />
+        <Route path="/exploration/:subjectSlug" element={<UnitPage />} />
+        <Route path="/exploration/:subjectSlug/:lessonId" element={<LessonShell />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

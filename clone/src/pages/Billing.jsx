@@ -54,9 +54,15 @@ export default function Billing() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {subjects.map((subject) => (
               <SubjectCard key={subject.name} subject={subject} linkTo={
-                subject.icon === "fractions-icon" ? "/exploration/fractions" :
-                subject.icon === "bonus-lessons-icon" ? "/exploration/bonus" :
-                null
+                {
+                  "addition-icon": "/exploration/addition",
+                  "subtraction-icon": "/exploration/subtraction",
+                  "multiplication-icon": "/exploration/multiplication",
+                  "division-icon": "/exploration/division",
+                  "fractions-icon": "/exploration/fractions",
+                  "numbers-place-value-icon": "/exploration/numbers-place-value",
+                  "bonus-lessons-icon": "/exploration/bonus",
+                }[subject.icon] || null
               } />
             ))}
           </div>
