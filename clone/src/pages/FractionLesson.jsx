@@ -1,60 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import LessonTopBar from "../components/LessonTopBar";
-
-/* ------------------------------------------------------------------ */
-/*  Question data                                                      */
-/* ------------------------------------------------------------------ */
-const questions = [
-  {
-    id: 1,
-    prompt: "What fraction of the bar is shaded?",
-    totalParts: 4,
-    shadedParts: 1,
-    color: "bg-blue-500",
-    choices: ["1/2", "1/4", "1/3", "2/4"],
-    correctIndex: 1,
-    tutorIntro: "Let's look at this shape together! How many equal parts do you see, and how many are colored in?",
-    hintOnWrong: "Count the total parts first. The bar is split into 4 equal pieces, and 1 is shaded.",
-    praiseOnCorrect: "Excellent! 1 out of 4 parts is shaded, so the fraction is 1/4. Great job!",
-  },
-  {
-    id: 2,
-    prompt: "What fraction of the bar is shaded?",
-    totalParts: 3,
-    shadedParts: 2,
-    color: "bg-emerald-500",
-    choices: ["1/3", "2/4", "2/3", "3/2"],
-    correctIndex: 2,
-    tutorIntro: "Here's another one! Look at the colored parts carefully.",
-    hintOnWrong: "Let's think about this... the bar has 3 parts and 2 are shaded. What fraction is that?",
-    praiseOnCorrect: "That's right! 2 out of 3 parts are shaded. You're getting the hang of fractions!",
-  },
-  {
-    id: 3,
-    prompt: "Which fraction is larger?",
-    totalParts: 2,
-    shadedParts: 1,
-    color: "bg-purple-500",
-    choices: ["1/2", "1/4"],
-    correctIndex: 0,
-    tutorIntro: "Now let's compare fractions. Think about which piece is bigger — half of something, or a quarter?",
-    hintOnWrong: "Imagine splitting a pizza. Would you rather have 1 out of 2 slices, or 1 out of 4?",
-    praiseOnCorrect: "Yes! 1/2 is larger than 1/4. When the top number is the same, fewer total parts means each part is bigger!",
-  },
-  {
-    id: 4,
-    prompt: "What fraction of the bar is shaded?",
-    totalParts: 8,
-    shadedParts: 3,
-    color: "bg-amber-500",
-    choices: ["3/4", "3/8", "5/8", "1/3"],
-    correctIndex: 1,
-    tutorIntro: "This one has more parts! Take your time and count carefully.",
-    hintOnWrong: "Count all the equal sections — there are 8. Now count the shaded ones.",
-    praiseOnCorrect: "Perfect! 3 out of 8 parts are shaded, so it's 3/8. You're a fraction star!",
-  },
-];
+import { fractionLessons } from "../data/fractions-questions";
 
 /* ------------------------------------------------------------------ */
 /*  Fraction bar visual                                                */
@@ -115,6 +62,9 @@ function TypingIndicator() {
 export default function FractionLesson() {
   const { lessonId } = useParams();
   const navigate = useNavigate();
+
+  const lesson = fractionLessons[lessonId] || fractionLessons["1"];
+  const questions = lesson.questions;
 
   const [qIndex, setQIndex] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -177,7 +127,7 @@ export default function FractionLesson() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       <LessonTopBar
-        title={`Fractions — Lesson ${lessonId || 1}`}
+        title={lesson.title}
         progress={progress}
         onClose={() => navigate("/exploration/fractions")}
       />

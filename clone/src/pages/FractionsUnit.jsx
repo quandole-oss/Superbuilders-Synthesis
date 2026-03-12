@@ -6,7 +6,7 @@ const lessons = [
   { id: 3, title: "Comparing Fractions", status: "available" },
   { id: 4, title: "Adding Fractions", status: "available" },
   { id: 5, title: "Subtracting Fractions", status: "locked" },
-  { id: 6, title: "Equivalent Fractions", status: "locked" },
+  { id: 6, title: "Equivalent Fractions", status: "available" },
   { id: 7, title: "Mixed Numbers", status: "locked" },
   { id: 8, title: "Fraction Challenge", status: "locked" },
 ];

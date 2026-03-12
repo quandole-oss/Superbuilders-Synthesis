@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import FractionsUnit from "./pages/FractionsUnit";
 import FractionLesson from "./pages/FractionLesson";
+import EquivalentFractionsLesson from "./pages/EquivalentFractionsLesson";
 import BonusUnit from "./pages/BonusUnit";
 import FlashcardFrenzy from "./pages/FlashcardFrenzy";
 import UnitPage from "./components/UnitPage";
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/exploration/fractions" element={<FractionsUnit />} />
+        <Route path="/exploration/fractions/6" element={<EquivalentFractionsLesson />} />
         <Route path="/exploration/fractions/:lessonId" element={<FractionLesson />} />
         <Route path="/exploration/bonus" element={<BonusUnit />} />
         <Route path="/exploration/flashcard_frenzy_multiply" element={<FlashcardFrenzy />} />

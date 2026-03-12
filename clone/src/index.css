@@ -122,3 +122,42 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.75rem;
   padding: 1.5rem;
 }
+
+/* ------------------------------------------------------------------ */
+/*  Fraction equivalence lesson — animations                           */
+/* ------------------------------------------------------------------ */
+
+@keyframes matchPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  50%  { box-shadow: 0 0 20px 6px rgba(16, 185, 129, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes shadePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-match-pulse {
+  animation: matchPulse 1s ease-in-out 3;
+}
+
+.animate-shade-pop {
+  animation: shadePop 0.2s ease-out;
+}
+
+/* Touch-friendly helpers */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (pointer: coarse) {
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
