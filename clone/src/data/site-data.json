@@ -190,7 +190,7 @@
     "welcome": {
       "path": "/",
       "heading": "Welcome, {studentName}!",
-      "subtext": "Let's do a quick sound check.",
+      "subtext": "",
       "ctaText": "Start",
       "background": "starfield"
     },

@@ -1,39 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 
 const lessons = [
-  { id: 1, title: "What is a Fraction?", status: "completed" },
-  { id: 2, title: "Halves and Quarters", status: "completed" },
-  { id: 3, title: "Comparing Fractions", status: "available" },
-  { id: 4, title: "Adding Fractions", status: "available" },
-  { id: 5, title: "Subtracting Fractions", status: "locked" },
-  { id: 6, title: "Equivalent Fractions", status: "available" },
-  { id: 7, title: "Mixed Numbers", status: "locked" },
-  { id: 8, title: "Fraction Challenge", status: "locked" },
+  { id: 1, title: "Share the Cookies" },
+  { id: 2, title: "Halves and Quarters" },
+  { id: 3, title: "Comparing Fractions" },
+  { id: 4, title: "Adding Fractions" },
+  { id: 5, title: "Subtracting Fractions" },
+  { id: 6, title: "Equivalent Fractions" },
+  { id: 7, title: "Mixed Numbers" },
+  { id: 8, title: "Fraction Challenge" },
 ];
-
-function StatusIcon({ status }) {
-  if (status === "completed") {
-    return (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 6L9 17l-5-5" />
-      </svg>
-    );
-  }
-  if (status === "locked") {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-        <path d="M7 11V7a5 5 0 0110 0v4" />
-      </svg>
-    );
-  }
-  // available — play icon
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="#3b82f6" stroke="none">
-      <polygon points="5,3 19,12 5,21" />
-    </svg>
-  );
-}
 
 export default function FractionsUnit() {
   const navigate = useNavigate();
@@ -66,46 +42,20 @@ export default function FractionsUnit() {
 
       {/* Lesson grid */}
       <div className="max-w-3xl w-full mx-auto px-6 pb-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {lessons.map((lesson) => {
-          const isClickable = lesson.status !== "locked";
-          const Card = isClickable ? Link : "div";
-          const cardProps = isClickable
-            ? { to: `/exploration/fractions/${lesson.id}` }
-            : {};
-
-          return (
-            <Card
-              key={lesson.id}
-              {...cardProps}
-              className={`flex items-center gap-4 p-4 rounded-xl border bg-slate-900 no-underline transition-colors ${
-                lesson.status === "locked"
-                  ? "border-white/5 opacity-50 cursor-not-allowed"
-                  : "border-white/10 hover:bg-white/5 cursor-pointer"
-              }`}
-            >
-              {/* Lesson number */}
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
-                lesson.status === "completed"
-                  ? "bg-green-500/20 text-green-400"
-                  : lesson.status === "available"
-                    ? "bg-blue-500/20 text-blue-400"
-                    : "bg-slate-700/50 text-slate-500"
-              }`}>
-                {lesson.id}
-              </div>
-
-              {/* Title */}
-              <span className={`flex-1 font-medium text-sm ${
-                lesson.status === "locked" ? "text-slate-500" : "text-white"
-              }`}>
-                {lesson.title}
-              </span>
-
-              {/* Status icon */}
-              <StatusIcon status={lesson.status} />
-            </Card>
-          );
-        })}
+        {lessons.map((lesson) => (
+          <Link
+            key={lesson.id}
+            to={`/exploration/fractions/${lesson.id}`}
+            className="flex items-center gap-4 p-4 rounded-xl border border-white/10 bg-slate-900 no-underline hover:bg-white/5 cursor-pointer transition-colors"
+          >
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 bg-blue-500/20 text-blue-400">
+              {lesson.id}
+            </div>
+            <span className="flex-1 font-medium text-sm text-white">
+              {lesson.title}
+            </span>
+          </Link>
+        ))}
       </div>
     </div>
   );

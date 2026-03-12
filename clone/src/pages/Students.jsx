@@ -10,7 +10,7 @@ export default function Students() {
     <div className="bg-starfield min-h-screen flex flex-col items-center justify-center px-4">
       <h1 className="text-4xl font-semibold text-white mb-10">{studentsPage.heading}</h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8 w-full max-w-lg">
+      <div className="flex flex-wrap justify-center gap-4 mb-8 w-full max-w-lg">
         {students.map((student, i) => (
           <StudentCard
             key={student.name}
